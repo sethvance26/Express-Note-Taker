@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
+const { title } = require("process");
 //This tells node that we want to create an express server.
 const app = express();
 //Sets an initial port. We"ll use this later in our listener
@@ -30,10 +31,26 @@ app.get("/api/notes", (req, res) => {
   });
 });
 
-// app.post("/api/notes", (req, res) => {
+app.post("/api/notes", (req, res) => {
+    fs.readFile(path.join(__dirname, "/db/db.json"), function (err, response) {
+        const notes = JSON.parse(response);
+        const noteID = notes.length + 1;
+        const allNotes = req.body
+        const newNote = {
+            id: noteID,
+            title: allNotes.title,
+            text: allNotes.text,
+        };
+        notes.push(newNote)
+        res.json(newNote)
+        fs.writeFile(path.join(__dirname, "/db/db.json"), JSON.stringify(notes, null, 2), function (err) {
+            
+        });
+  });
+});
 
-// const newNote = req.body
-// console.log("Adding a new note!", newNote);
+
+
 
 //This code starts our server ~
 app.listen(PORT, () => {

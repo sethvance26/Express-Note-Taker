@@ -1,17 +1,32 @@
 [
-    {
-        "id": 1,
-        "title": "study",
-        "text": "study for bootcamp at 9am\n"
-      },
-      {
-        "id": 2,
-        "title": "gym",
-        "text": "leg day at 2pm\n"
-      },
-      {
-        "id": 3,
-        "title": "meeting",
-        "text": "meeting at 4pm\n"
-      }
+  {
+    "id": 1,
+    "title": "study",
+    "text": "study for bootcamp at 9am\n"
+  },
+  {
+    "id": 2,
+    "title": "gym",
+    "text": "leg day at 2pm\n"
+  },
+  {
+    "id": 3,
+    "title": "meeting",
+    "text": "meeting at 4pm\n"
+  },
+  {
+    "id": 4,
+    "title": "Hello",
+    "text": "tHIS IS A NOTE"
+  },
+  {
+    "id": 5,
+    "title": "This is a test",
+    "text": "testing"
+  },
+  {
+    "id": 6,
+    "title": "sdfsdfs",
+    "text": "sdfsdfsdf"
+  }
 ]
