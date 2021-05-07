@@ -1,7 +1,6 @@
 const express = require("express");
-const fs = require('fs');
 const path = require('path');
-
+const fs = require('fs');
 //This tells node that we want to create an express server.
 const app = express();
 //Sets an initial port. We"ll use this later in our listener
@@ -15,14 +14,15 @@ app.use(express.json());
 
 
 app.use(express.static("public"));
-//This is a route to the index.html. Where the user goes initially. 
+
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, 'public/index.html'))
 })
-//This is a route to the notes.html. 
 app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, 'public/notes.html'))
 })
+
+app.get("/api/notes")
 
 
 
