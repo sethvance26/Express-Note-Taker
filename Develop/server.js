@@ -15,16 +15,16 @@ app.use(express.static("public"));
 
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "public/index.html"));
-});
+    res.sendFile(path.join(__dirname, 'public/index.html'))
+})
 app.get("/notes", function (req, res) {
-  res.sendFile(path.join(__dirname, "public/notes.html"));
+    res.sendFile(path.join(__dirname, 'public/notes.html'))
 });
 
 
 app.get("/api/notes", (req, res) => {
-  fs.readFile(path.join(__dirname, "/db/db.json"), function (err, res) {
-    const notes = JSON.parse(res);
+  fs.readFile(path.join(__dirname, "/db/db.json"), function (err, response) {
+    const notes = JSON.parse(response);
     console.log(notes);
     res.json(notes);
   });
