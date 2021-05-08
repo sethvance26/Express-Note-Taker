@@ -1,3 +1,4 @@
+
 //We're importing our packages below.
 const express = require("express");
 const path = require("path");
@@ -55,10 +56,15 @@ app.post("/api/notes", (req, res) => {
 });
 
 // app.delete('/api/notes/:id', (req, res) => {
-//   fs.readFile(path.join(__dirname, "/db/db.json"), function (err, response) {
-
-
-
+//     selectedNote = req.params.id;
+//     console.log(selectedNote);
+//     notes = fs.readFile(path.join(__dirname, "/db/db.json"), function (err, response) {
+//     notes.filter(note => note.id != selectedNote);
+//       res.send({type: 'DELETE' });
+//   })
+// });
+  
+  
 //This code starts our server ~
 app.listen(PORT, () => {
   console.log(`App listening on PORT: ${PORT}`);
