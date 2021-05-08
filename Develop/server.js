@@ -55,15 +55,30 @@ app.post("/api/notes", (req, res) => {
 });
 });
 
-// app.delete('/api/notes/:id', (req, res) => {
-//     selectedNote = req.params.id;
-//     console.log(selectedNote);
-//     notes = fs.readFile(path.join(__dirname, "/db/db.json"), function (err, response) {
-//     notes.filter(note => note.id != selectedNote);
-//       res.send({type: 'DELETE' });
-//   })
-// });
-  
+//This is to delete a note
+app.delete('/api/notes/:id', (req, res) => {
+  const ID = parseInt(req.params.id);
+  console.log("console log id =", ID);
+  fs.readFile(path.join(__dirname, "/db/db.json"), function (error, response) {
+    if (error) {
+      console.log(error);
+    }
+    const notes = JSON.parse(response);
+    const newNotesArray = notes.filter((item) => {
+      return item.id !== ID;
+    });
+    fs.writeFile(path.join(__dirname, "/db/db.json"), 
+      JSON.stringify(newNotesArray, null, 2),
+      function (err) {
+        if (err) throw err;
+        res.end();
+      }
+    );
+  });
+});
+
+
+
   
 //This code starts our server ~
 app.listen(PORT, () => {
