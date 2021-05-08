@@ -55,8 +55,6 @@ app.post("/api/notes", (req, res) => {
 });
 
 // app.delete('/api/notes/:id', (req, res) => {
-    
-
 //   fs.readFile(path.join(__dirname, "/db/db.json"), function (err, response) {
 
 
