@@ -4,7 +4,6 @@
     "title": "study",
     "text": "study for bootcamp at 9am\n"
   },
-
   {
     "id": 2,
     "title": "meeting",
@@ -15,5 +14,4 @@
     "title": "Hello",
     "text": "tHIS IS A NOTE"
   }
-
 ]
