@@ -14,6 +14,7 @@ Express.js Note Taker
 - [Tests](#Tests)
 - [Contributions](#Contributions)
 - [Questions](#Questions)
+- [Heroku](#Heroku-GitHub-Pages)
 
 ## Description
 Note Taker is an Express.js backend application that can be used to write and save notes. The application can save and retrieve note data from a JSON file. We were given starter front end code to modify, and our job was to build the backend and deploy our app  to Heroku. 
@@ -42,7 +43,7 @@ of the generated HTML’s appearance and functionality:
 ## Contributions
 Here our policy is, if you break it you buy it!
 
-### Heroku & Github Pages!
+### Heroku-Github-Pages!
 We were asked to have our application up and running on Heroku, and provide a link for our application there as well as Github Pages. You can find those here!
 Heroku - https://vance-express-note-taker.herokuapp.com/
 Github Pages - https://sethvance26.github.io/Express-Note-Taker/
