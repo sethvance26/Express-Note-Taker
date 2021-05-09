@@ -45,7 +45,7 @@ Here our policy is, if you break it you buy it!
 
 ### Heroku-Github-Pages!
 We were asked to have our application up and running on Heroku, and provide a link for our application there as well as Github Pages. You can find those here!
-Heroku - https://vance-express-note-taker.herokuapp.com/
+Heroku - 
 Github Pages - https://sethvance26.github.io/Express-Note-Taker/
 
 ### Questions
