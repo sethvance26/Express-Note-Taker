@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
-
+console.log('Hello');
 
 
 //These routes below allow the server to know what file to send to the user based on the URL. 
